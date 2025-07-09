@@ -1,76 +1,37 @@
 # Phishing-Website-Detection-Tool
 
- Project Overview
+ Project Overview:
  
 Phishing websites are deceptive sites designed to trick users into providing sensitive information like login credentials, banking info, or personal data. This tool uses both Rule-Based logic and a Machine Learning model to identify potentially malicious URLs.
 
-Objective
+Objective:
 
-To build a lightweight and effective phishing detection tool that:
+To build a lightweight and effective phishing detection tool thatFlags suspicious URLs using rule-based heuristics Applies a trained ML model to detect phishing characteristics
 
-Flags suspicious URLs using rule-based heuristics
+ Technologies Used:
 
-Applies a trained ML model to detect phishing characteristics
+1.Python	Core- programming language
 
- Technologies Used
- 
-Technology	Description
+2.Pandas	-Data preprocessing and loading CSV
 
-Python	Core programming language
+3.Scikit-learn	-Machine Learning (Random Forest Classifier)
 
-Pandas	Data preprocessing and loading CSV
+4.Regex	Pattern - matching for rule-based detection
 
-Scikit-learn	Machine Learning (Random Forest Classifier)
+5.Tkinter -	GUI development (optional)
 
-Regex	Pattern matching for rule-based detection
+6.Joblib -	Saving and loading ML models
 
-Tkinter	GUI development (optional)
-
-Joblib	Saving and loading ML models
-
-URLLib/Parse	URL analysis for rule-based logic
-
-📁 Project Structure
-
-bash
-
-Copy
-
-Edit
-
-Project1Cy/
-
-├── Phishing_Legitimate_full.csv      # Dataset
-
-├── ml_detector.py                    # Trains ML model and saves pkl
-
-├── phishing_rf_model.pkl             # Saved ML model
-
-├── gui.py                            # GUI version (Tkinter)
-
-├── rule_based.py                     # Rule-based detector script
+7.URLLib/Parse -	URL analysis for rule-based logic
 
 
-├── combined_detector.py              # Combines ML + Rule-based
+How to Run:
 
-├── README.md                         # Project documentation
-
- ML Model Used
-
-Model: RandomForestClassifier
-
-Input Features: 49 numerical features (engineered from URLs)
-
-Target: CLASS_LABEL (0 = Legitimate, 1 = Phishing)
-
-Accuracy: ~100% on provided dataset (for demo)
-
-How to Run
 1. Install Dependencies
 
 pip install pandas scikit-learn joblib
-2. Train & Save ML Model
 
+2. Train & Save ML Model
 
 python ml_detector.py
 
@@ -82,12 +43,13 @@ python combined_detector.py
 
 python gui.py
 
-Features
-✅ Rule-based pattern checks (@, IP in domain, hyphens, keywords)
+Features:
 
-✅ ML prediction using trained model
+1. Rule-based pattern checks (@, IP in domain, hyphens, keywords)
 
-✅ GUI interface for user input (optional)
+2. ML prediction using trained model
 
-✅ Easy to extend with more features
+3. GUI interface for user input (optional)
+
+4. Easy to extend with more features
 
